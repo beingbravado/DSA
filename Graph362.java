@@ -15,6 +15,7 @@ public class Graph362 {
         }
 
         // int[] x={2, 2, -2, -2, 1, 1, -1, -1};
+        
         // int[] y={1, -1, 1, -1, 2, -2, 2, -2};
         visited[KnightPos[0]][KnightPos[1]]= true;
         for (int i=0;i<8;i++){
