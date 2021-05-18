@@ -1,16 +1,16 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class Graph362 {
     public static int ans;
 
     public static void minStep(int kx, int ky, int tx, int ty, boolean[][] visited, int n, int steps) {
         // Code here
-        if (kx >= n || ky >= n || kx < 0 || ky < 0 || visited[kx][ky])
+        if (kx >= n || ky >= n || kx < 1 || ky < 1 || visited[kx][ky])
             return;
 
         if (kx == tx && ky == ty) {
             ans = Math.min(ans, steps);
+            System.out.println(steps);
             return;
         }
 
@@ -18,7 +18,7 @@ public class Graph362 {
         int[] y = { 1, -1, 1, -1, 2, -2, 2, -2 };
         visited[kx][ky] = true;
         for (int i = 0; i < 8; i++) {
-            minStep(kx + x[i], ky + y[i], tx, ty, visited, n, steps + 1);
+            if(steps<=ans) minStep(kx + x[i], ky + y[i], tx, ty, visited, n, steps + 1);
         }
         visited[kx][ky] = false;
     }
@@ -26,11 +26,11 @@ public class Graph362 {
     public static int minStepToReachTarget(int KnightPos[], int TargetPos[], int n) {
         // Code here
         int ans = n*n;
-        System.out.println(ans);
+        // System.out.println(ans);
         boolean[][] visited = new boolean[n + 1][n + 1];
         int steps = 0;
-        int kx = KnightPos[0] - 1, ky = KnightPos[1] - 1;
-        int tx = TargetPos[0] - 1, ty = TargetPos[1] - 1;
+        int kx = KnightPos[0], ky = KnightPos[1];
+        int tx = TargetPos[0], ty = TargetPos[1];
         minStep(kx, ky, tx, ty, visited, n, steps);
         return ans;
     }
