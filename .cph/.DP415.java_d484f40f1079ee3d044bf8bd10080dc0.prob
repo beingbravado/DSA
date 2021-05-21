@@ -1,0 +1,1 @@
+{"name":"Local: DP415","url":"e:\\JAVA\\DSA_450\\DP415.java","tests":[{"id":1621500940905,"input":"geek\ngesek","output":"1"},{"id":1621500959522,"input":"gfg\ngfg","output":"0"},{"id":1621501618377,"input":"ecfbefdcfca badfcbebbf","output":"9"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\JAVA\\DSA_450\\DP415.java","group":"local","local":true}
