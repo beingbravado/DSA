@@ -20,12 +20,48 @@ public class DP416 {
                 } else {
                     dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
                 }
-                System.out.print(dp[i][j]+" ");
+                // System.out.print(dp[i][j] + " ");
             }
-            System.out.println();
+            // System.out.println();
         }
 
-        return Math.max(nx, ny) - dp[nx][ny];
+        StringBuilder sb = new StringBuilder();
+        while (nx > 0 && ny > 0) {
+            if (a[nx - 1] == b[ny - 1]) {
+                sb.append(a[nx - 1]);
+                nx--;
+                ny--;
+            } else if (dp[nx][ny - 1] > dp[nx - 1][ny]) {
+                ny--;
+            } else {
+                nx--;
+            }
+        }
+        char[] s = sb.reverse().toString().toCharArray();
+        nx = x.length();
+        ny = y.length();
+        int ans = 0;
+
+        int i = 0, j = 0, k = 0;
+        int xCount = 0, yCount = 0;
+        while (i < nx && j < ny && k < s.length) {
+            while (a[i] != s[k]) {
+                xCount++;
+                i++;
+            }
+            while (b[j] != s[k]) {
+                yCount++;
+                j++;
+            }
+            ans += Math.max(xCount, yCount);
+            k++;
+            i++;
+            j++;
+            xCount = 0;
+            yCount = 0;
+        }
+        ans += Math.max(nx - i, ny - j);
+        return ans;
     }
 
     public static void main(String[] args) throws Exception {
