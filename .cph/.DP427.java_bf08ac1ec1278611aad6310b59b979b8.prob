@@ -1,0 +1,1 @@
+{"name":"Local: DP427","url":"e:\\JAVA\\DSA_450\\DP427.java","tests":[{"id":1621602141880,"input":"geeks geeksfor geeksforgeeks","output":"5"},{"id":1621614498064,"input":"ffmznimkkas vwsrenzkycx fxtlsgy","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\JAVA\\DSA_450\\DP427.java","group":"local","local":true}
