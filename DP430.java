@@ -9,7 +9,7 @@ public class DP430 {
         int ans = 1;
         for (int i = 1; i < n; i++) {
             for (int j = i - 1; j >= 0; j--) {
-                if (Math.abs(a[i] - a[j]) <= 1) {
+                if (Math.abs(a[i] - a[j]) == 1) {
                     dp[i] = Math.max(dp[i], 1 + dp[j]);
                 }
             }
