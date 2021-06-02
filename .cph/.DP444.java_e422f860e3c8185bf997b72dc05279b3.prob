@@ -1,0 +1,1 @@
+{"name":"Local: DP444","url":"e:\\JAVA\\DSA_450\\DP444.java","tests":[{"id":1622628596783,"input":"5\n1 2 3 -2 5","output":"9"},{"id":1622628609596,"input":"4\n-1 -2 -3 -4","output":"-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\JAVA\\DSA_450\\DP444.java","group":"local","local":true}
