@@ -1,0 +1,1 @@
+{"name":"Local: DP451","url":"e:\\JAVA\\DSA_450\\DP451.java","tests":[{"id":1622625992158,"input":"abcd","output":"4"},{"id":1622626208632,"input":"aab","output":"4"},{"id":1622626221518,"input":"aaaa","output":"15"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\JAVA\\DSA_450\\DP451.java","group":"local","local":true}
