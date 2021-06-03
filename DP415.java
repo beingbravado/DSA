@@ -7,14 +7,14 @@ public class DP415 {
         int[][] dp = new int[m][m];
         for (int g = 1; g < m; g++) {
             for (int i = 0, j = g; j < m; i++, j++) {
-                dp[i][j] = Math.min(dp[i + 1][j] + a[i] * a[j - 1] * a[j], dp[i][j - 1] + a[i] * a[i + 1] * a[j]);
+                dp[i][j] = Math.min(dp[i + 1][j] + a[i] * a[i + 1] * a[j + 1], dp[i][j - 1] + a[i] * a[j] * a[j + 1]);
             }
         }
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < m; j++) 
-                System.out.print(dp[i][j] + " ");
-            System.out.println();
-        }
+        // for (int i = 0; i < m; i++) {
+        //     for (int j = 0; j < m; j++)
+        //         System.out.print(dp[i][j] + " ");
+        //     System.out.println();
+        // }
         return dp[0][m - 1];
     }
 
