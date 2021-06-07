@@ -1,13 +1,18 @@
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class CountingRooms {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws IOException {
         Scanner scan = new Scanner(System.in);
-        int n = scan.nextInt();
-        int m = scan.nextInt();
+        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+        String[] s1= br.readLine().trim().split(" ");
+        int n = Integer.parseInt(s1[0]);
+        int m = Integer.parseInt(s1[1]);
         char[][] grid = new char[n][m];
-        for (int i = 0; i < n; i++)
-            grid[i] = scan.next().toCharArray();
+        for (int i = 0; i < n; i++){
+            String s2= br.readLine().trim();
+            grid[i]= s2.toCharArray();
+        }
         int ans = 0;
         boolean[][] visited = new boolean[n][m];
         for (int i = 0; i < n; i++) {
