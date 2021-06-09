@@ -1,0 +1,1 @@
+{"name":"Local: Labyrinth","url":"e:\\JAVA\\DSA_450\\Labyrinth.java","tests":[{"id":1623129142753,"input":"5 8\n########\n#.A#...#\n#.##.#B#\n#......#\n########","output":"YES\n9\nLDDRRRRRU"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\JAVA\\DSA_450\\Labyrinth.java","group":"local","local":true}
