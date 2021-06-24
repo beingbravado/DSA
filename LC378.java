@@ -17,12 +17,15 @@ public class LC378 {
     public static int kount(int[][] a, int num) {
         int count = 0;
         for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a.length; j++) {
-                if (a[i][j] <= num)
-                    count++;
+            int l = 0, r = a.length - 1;
+            while (l <= r) {
+                int mid = (l + r) / 2;
+                if (a[i][mid] > num)
+                    r = mid - 1;
                 else
-                    break;
+                    l = mid + 1;
             }
+            count += l;
             if (a[i][0] > num)
                 break;
         }
