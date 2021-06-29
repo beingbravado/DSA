@@ -1,0 +1,1 @@
+{"name":"Local: SPOJ_ANARC09A","url":"e:\\JAVA\\DSA_450\\SPOJ_ANARC09A.java","tests":[{"id":1624944932778,"input":"}{\n{}{}{}\n{{{}\n---","output":"1. 2\n2. 0\n3. 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\JAVA\\DSA_450\\SPOJ_ANARC09A.java","group":"local","local":true}
