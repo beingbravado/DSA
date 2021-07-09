@@ -7,8 +7,6 @@ public class MaxLengthRepeatedSubarray {
             for (int j = 1; j <= m; j++) {
                 if (b[j - 1] == a[i - 1]) {
                     dp[i][j] = dp[i - 1][j - 1] + 1;
-                    if (ans < dp[i][j])
-                        ans = dp[i][j];
                     ans = Math.max(ans, dp[i][j]);
                 }
             }
