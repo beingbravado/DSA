@@ -9,23 +9,43 @@ public class LL149 {
         }
     }
 
-    public static Node findIntersection(Node head1, Node head2) {
-        // code here.
-        Node intersection = new Node(0);
-        Node ans = intersection;
-
-        while (head1 != null && head2 != null) {
-            if (head1.data == head2.data) {
-                Node x = new Node(head1.data);
-                intersection.next = x;
-                intersection = intersection.next;
-                head1 = head1.next;
-                head2 = head2.next;
-            } else if (head1.data < head2.data)
-                head1 = head1.next;
-            else
-                head2 = head2.next;
+    public static int intersectPoint(Node head1, Node head2) {
+        int intersection = -1;
+        int lh1 = 0, lh2 = 0;
+        Node ptr = head1;
+        while (ptr != null) {
+            ptr = ptr.next;
+            lh1++;
         }
-        return ans.next;
+        ptr = head2;
+        while (ptr != null) {
+            ptr = ptr.next;
+            lh2++;
+        }
+        int dif = lh1 - lh2;
+
+        if (dif != 0) {
+            while (dif > 0) {
+                head1 = head1.next;
+                dif--;
+            }
+            while (dif < 0) {
+                head2 = head2.next;
+                dif++;
+            }
+        }
+        boolean ans = true;
+        while (head1 != null && head2 != null) {
+            if (head1 == head2 && ans) {
+                intersection = head1.data;
+                ans = false;
+            } else if (head1 != head2 && !ans) {
+                intersection = -1;
+                ans = true;
+            }
+            head1 = head1.next;
+            head2 = head2.next;
+        }
+        return intersection;
     }
 }
