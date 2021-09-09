@@ -1,6 +1,5 @@
 public class LC98 {
     class TreeNode {
-
         int val;
         TreeNode left;
         TreeNode right;
